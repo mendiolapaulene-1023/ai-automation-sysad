@@ -2,42 +2,429 @@
 <html lang="en">
 <head> 
    <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-<title>AI & SysAd Portfolio</title> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta name="description" content="Paulene Mendiola's portfolio showcasing AI automation, system administration, IT support, and workflow projects.">
+  <title>Paulene Mendiola | AI Automation & Systems</title>
+
 <style>
-body { font-family: Arial, sans-serif; line-height: 1.6; margin: 0; padding: 0; background: #f4f4f9; color: #333; } header { background: #1a1a2e; color: #fff; padding: 2rem; text-align: center; } .container { max-width: 800px; margin: 2rem auto; padding: 0 1rem; } .card { background: #fff; padding: 1.5rem; margin-bottom: 1rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); } h2 { color: #1a1a2e; } 
-footer { text-align: center; padding: 2rem; color: #777; } 
-</style> 
-</head> 
-<body> 
+ :root {
+      --bg: #0b1120;
+      --panel: #121c30;
+      --text: #edf2ff;
+      --muted: #a6b3c9;
+      --accent: #68e1fd;
+      --border: #263650;
+    }
 
-<header> 
-<h1>Paulene Mendiola</h1> 
-<p>AI Automation Specialist & System Administrator</p> 
-</header> 
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+     }
 
-<div class="container"> 
-<div class="card"> 
-<h2>About Me</h2> 
-<p>Welcome to my portfolio! I specialize in building AI automation workflows and managing system infrastructure efficiently.</p>
-</div>
-<div class="card"> 
-<h2>Projects</h2>
-<h3>1. AI Automation Workflow</h3> 
-<p>Description of a cool automation tool or script you built.</p> 
-<h3>2. System Administration Setup</h3> 
-<p>Description of server management, cloud setups, or scripting work.</p> 
-</div> 
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
 
-<div class="card">
-<h2>Contact</h2>
-<p>Email: paulenemendiola0510@gmail.com</p>
-</div> 
-</div>
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
 
-<footer> 
-<p>&copy; 2026 Paulene Mendiola. Built with GitHub Pages.</p> 
-</footer> 
+    a:hover {
+      text-decoration: underline;
+    }
 
-</body> 
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      padding: 20px 8%;
+      border-bottom: 1px solid var(--border);
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    nav .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    nav .links a {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .hero {
+      max-width: 1000px;
+      margin: auto;
+      padding: 100px 24px 85px;
+    }
+
+    .eyebrow {
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    h1 {
+      font-size: clamp(38px, 7vw, 66px);
+      line-height: 1.12;
+      margin: 18px 0;
+    }
+
+    h2 {
+      font-size: 29px;
+      margin-top: 0;
+    }
+
+    h3 {
+      font-size: 19px;
+    }
+
+    .hero p, .section-intro {
+      color: var(--muted);
+      max-width: 680px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 28px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 20px;
+      border-radius: 8px;
+      border: 1px solid var(--accent);
+      font-weight: bold;
+    }
+
+    .primary {
+      background: var(--accent);
+      color: #07111f;
+    }
+
+    section {
+      padding: 65px 24px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(245px, 1fr));
+      gap: 18px;
+      margin-top: 28px;
+    }
+
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 24px;
+    }
+
+    .card p, .card li {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .tag {
+      display: inline-block;
+      border: 1px solid #35516a;
+      color: var(--accent);
+      padding: 4px 9px;
+      border-radius: 20px;
+      font-size: 12px;
+      margin: 4px 3px 0 0;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    .contact-card {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 28px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 28px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        padding: 18px 5%;
+      }
+
+      nav .links {
+        gap: 12px;
+      }
+
+      .hero {
+        padding-top: 65px;
+      }
+
+      section {
+        padding: 45px 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <a class="brand" href="#home">Paulene M.</a>
+    <div class="links">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <header class="hero" id="home">
+    <div class="eyebrow">AI Automation • IT Systems • Technical Support</div>
+
+    <h1>Making technology work smarter.</h1>
+
+    <p>
+      Hi, I'm Paulene Mendiola, an AI automation and systems
+      professional focused on streamlining workflows, improving
+      technical processes, and creating practical digital solutions.
+    </p>
+
+    <p>
+      I combine automation, structured troubleshooting, system
+      documentation, and a problem-solving mindset to help make
+      everyday operations more efficient.
+    </p>
+
+    <div class="buttons">
+      <a class="btn primary" href="#projects">Explore My Projects</a>
+      <a class="btn" href="#contact">Get in Touch</a>
+    </div>
+  </header>
+
+  <section id="about">
+    <div class="eyebrow">A little about me</div>
+    <h2>About Me</h2>
+
+    <p class="section-intro">
+      I enjoy finding better ways to complete repetitive tasks,
+      organise information, troubleshoot technical issues, and
+      improve how systems and workflows operate.
+    </p>
+
+    <div class="card">
+      <p>
+        With 2 years of experience across AI automation and system
+        administration, I am interested in solutions that connect
+        people, processes, and technology.
+      </p>
+
+      <p>
+        My approach is practical: understand the problem, map the
+        workflow, implement an appropriate solution, test the result,
+        and document the process so it can be maintained.
+      </p>
+
+      <p>
+        I am continuously developing my skills in workflow automation,
+        AI-assisted processes, technical troubleshooting, and
+        systems documentation.
+      </p>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="eyebrow">What I work with</div>
+    <h2>Skills & Tools</h2>
+
+    <div class="grid">
+      <div class="card">
+        <h3>AI & Workflow Automation</h3>
+        <ul>
+          <li>Workflow mapping and process improvement</li>
+          <li>n8n workflow design</li>
+          <li>AI-assisted information processing</li>
+          <li>Email routing and notifications</li>
+          <li>Automation testing and documentation</li>
+        </ul>
+        <span class="tag">n8n</span>
+        <span class="tag">AI Tools</span>
+        <span class="tag">Slack</span>
+      </div>
+
+      <div class="card">
+        <h3>System Administration & IT Support</h3>
+        <ul>
+          <li>Technical troubleshooting</li>
+          <li>Account and access issue investigation</li>
+          <li>SaaS application support</li>
+          <li>Incident and ticket documentation</li>
+          <li>Knowledge base and SOP creation</li>
+        </ul>
+        <span class="tag">IT Support</span>
+        <span class="tag">Documentation</span>
+        <span class="tag">Troubleshooting</span>
+      </div>
+
+      <div class="card">
+        <h3>Platforms & Productivity</h3>
+        <ul>
+          <li>CRM and customer support platforms</li>
+          <li>Ticket management workflows</li>
+          <li>HTML and CSS fundamentals</li>
+          <li>GitHub repository management</li>
+          <li>Process documentation</li>
+        </ul>
+        <span class="tag">Zendesk</span>
+        <span class="tag">Salesforce</span>
+        <span class="tag">GitHub</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="eyebrow">Selected work</div>
+    <h2>Projects & Case Studies</h2>
+
+    <p class="section-intro">
+      Examples of workflows and technical solutions that demonstrate
+      my approach to automation, troubleshooting, and process improvement.
+    </p>
+
+    <div class="grid">
+      <article class="card">
+        <span class="tag">Automation</span>
+        <h3>01. Smart Email Router</h3>
+        <p>
+          Portfolio project concept for organising incoming emails
+          and directing messages based on predefined rules and AI-assisted
+          classification.
+        </p>
+        <p><strong>Workflow:</strong> Email input → classification →
+          routing → result logging.</p>
+        <p><strong>Focus:</strong> Reduce manual sorting and create
+          a more organised email process.</p>
+      </article>
+
+      <article class="card">
+        <span class="tag">Workflow Integration</span>
+        <h3>02. Automated Lead Notifications</h3>
+        <p>
+          Demonstrates how a new lead can trigger a structured
+          notification to a team channel, helping team members
+          respond to enquiries more consistently.
+        </p>
+        <p><strong>Workflow:</strong> Lead received → data processed →
+          Slack notification.</p>
+        <p><strong>Focus:</strong> Timely notifications and consistent
+          lead information.</p>
+      </article>
+
+      <article class="card">
+        <span class="tag">IT Operations</span>
+        <h3>03. IT Troubleshooting Knowledge Base</h3>
+        <p>
+          A structured documentation project for recording common
+          technical issues, investigation steps, resolutions, and
+          escalation requirements.
+        </p>
+        <p><strong>Workflow:</strong> Identify issue → investigate →
+          document resolution → verify result.</p>
+        <p><strong>Focus:</strong> Consistent troubleshooting and
+          reusable technical documentation.</p>
+      </article>
+    </div>
+
+    <p class="section-intro">
+      Note: The project descriptions above are starting examples.
+      Replace them with your actual implementations, screenshots,
+      workflow diagrams, repositories, and verified results.
+    </p>
+  </section>
+
+  <section id="approach">
+    <div class="eyebrow">How I solve problems</div>
+    <h2>My Working Approach</h2>
+
+    <div class="grid">
+      <div class="card">
+        <h3>01. Understand</h3>
+        <p>Identify the problem, requirements, and expected outcome.</p>
+      </div>
+      <div class="card">
+        <h3>02. Build</h3>
+        <p>Design a practical workflow or troubleshooting process.</p>
+      </div>
+      <div class="card">
+        <h3>03. Test</h3>
+        <p>Check expected behaviour, errors, and edge cases.</p>
+      </div>
+      <div class="card">
+        <h3>04. Document</h3>
+        <p>Record the solution and make it easier to maintain.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="eyebrow">Let's connect</div>
+    <h2>Contact Me</h2>
+
+    <div class="contact-card">
+      <p>
+        I'm interested in opportunities involving AI automation,
+        systems support, technical troubleshooting, and process improvement.
+      </p>
+
+      <p>
+        Email:
+        <a href="mailto:paulenemendiola0510@gmail.com">
+          paulenemendiola0510@gmail.com
+        </a>
+      </p>
+
+      <p>
+        GitHub:
+        <a href="https://github.com/mendiolapaulene-1023"
+           target="_blank" rel="noopener noreferrer">
+          View my GitHub profile
+        </a>
+      </p>
+
+      <p>
+        LinkedIn and CV links can be added here when ready.
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Paulene Mendiola | AI Automation & Systems Portfolio</p>
+  </footer>
+
+</body>
 </html>
