@@ -20,6 +20,33 @@
       box-sizing: border-box;
       scroll-behavior: smooth;
     }
+    .project-gallery {
+  margin-top: 28px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+}
+
+.project-gallery h4 {
+  margin-bottom: 16px;
+  font-size: 17px;
+}
+
+.project-gallery img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  margin-bottom: 18px;
+  object-fit: contain;
+}
+
+.project-gallery img.portrait {
+  max-width: 420px;
+  margin-left: auto;
+  margin-right: auto;
+}
+    
 
     body {
       margin: 0;
@@ -219,59 +246,70 @@
   </nav>
 
   <header class="hero" id="home">
-    <div class="eyebrow">AI Automation • IT Systems • Technical Support</div>
+  <div class="eyebrow">
+    AI AUTOMATION • SYSTEMS ADMINISTRATION • TECH SUPPORT
+  </div>
 
-    <h1>Making technology work smarter.</h1>
+  <h1>Technology, automation, and better customer experiences.</h1>
 
-    <p>
-      Hi, I'm Paulene Mendiola, an aspiring AI automation and
-      systems professional focused on streamlining workflows,
-      improving technical processes, and creating practical
-      digital solutions.
-    </p>
+  <h2>Hi, I'm Paulene Mendiola.</h2>
 
-    <p>
-      I combine workflow automation, structured troubleshooting,
-      system documentation, and a problem-solving mindset to help
-      make everyday operations more efficient.
-    </p>
+  <p>
+    I bring over 8 years of BPO experience across customer service,
+    sales, and technical support, with hands-on projects in AI
+    automation, workflow design, and systems administration.
+  </p>
 
-    <div class="buttons">
-      <a class="btn primary" href="#projects">Explore My Projects</a>
-      <a class="btn" href="#contact">Get in Touch</a>
-    </div>
-  </header>
+  <p>
+    My background in troubleshooting SaaS and VoIP issues, supporting
+    customers, and working with CRM and ticketing platforms gives me
+    a practical foundation for building smarter workflows and
+    improving IT operations.
+  </p>
+
+  <div class="buttons">
+    <a class="btn primary" href="#projects">Explore My Projects</a>
+    <a class="btn" href="#skills">Explore My Skills</a>
+    <a class="btn" href="#contact">Contact Me</a>
+  </div>
+</header>
 
   <section id="about">
-    <div class="eyebrow">A little about me</div>
-    <h2>About Me</h2>
+  <div class="eyebrow">My background</div>
+  <h2>From Customer Support to Technical Solutions</h2>
 
-    <p class="section-intro">
-      I enjoy finding better ways to complete repetitive tasks,
-      organise information, troubleshoot technical issues, and
-      improve how systems and workflows operate.
+  <p class="section-intro">
+    My experience in BPO has taught me how to investigate problems,
+    communicate clearly, manage customer concerns, and find
+    solutions in fast-paced environments.
+  </p>
+
+  <div class="card">
+    <p>
+      Over 8 years in customer service, sales, and technical support
+      have helped me develop strong troubleshooting, communication,
+      and problem-solving skills.
     </p>
 
-    <div class="card">
-      <p>
-        I bring customer support and technical troubleshooting
-        experience, along with hands-on projects in workflow
-        automation and system administration.
-      </p>
+    <p>
+      I have experience supporting SaaS and VoIP products, helping
+      customers resolve technical issues, documenting cases, and
+      using CRM and ticket management platforms.
+    </p>
 
-      <p>
-        My approach is practical: understand the problem, map the
-        workflow, implement an appropriate solution, test the result,
-        and document the process so it can be maintained.
-      </p>
+    <p>
+      Alongside my professional background, I develop practical
+      projects involving workflow automation, AI-assisted processes,
+      and system administration concepts. I enjoy exploring how
+      technology can reduce repetitive work and improve efficiency.
+    </p>
 
-      <p>
-        I am continuously developing my skills in workflow automation,
-        AI-assisted processes, technical troubleshooting, and
-        systems documentation.
-      </p>
-    </div>
-  </section>
+    <p>
+      My goal is to combine customer-focused support with technical
+      skills to help businesses improve their systems and workflows.
+    </p>
+  </div>
+</section>
 
   <section id="skills">
     <div class="eyebrow">What I work with</div>
@@ -320,7 +358,21 @@
         <span class="tag">Salesforce</span>
         <span class="tag">GitHub</span>
       </div>
-    </div>
+
+      <div class="card">
+  <h3>BPO &amp; Customer Experience</h3>
+  <ul>
+    <li>Customer service and sales support</li>
+    <li>SaaS and VoIP technical support</li>
+    <li>Customer issue investigation and resolution</li>
+    <li>CRM and ticket management</li>
+    <li>Customer communication and follow-up</li>
+  </ul>
+  <span class="tag">BPO</span>
+  <span class="tag">Customer Service</span>
+  <span class="tag">Technical Support</span>
+</div>
+
   </section>
 
   <section id="projects">
@@ -375,20 +427,26 @@
 <div class="project-gallery">
   <h4>Project Screenshots</h4>
 
-  <img src="images/support-dashboard.png"
-       alt="SupportFlow Dashboard"
-       style="width: 100%; border-radius: 12px;">
+  <img
+    src="./images/support-dashboard.png"
+    alt="SupportFlow Dashboard"
+    loading="lazy"
+  >
 
   <img
-  src="./images/customer-inquiry-form.png"
-  alt="Customer Inquiry Form"
-  style="width: 100%; max-width: 500px; height: auto; border-radius: 12px;"
->
+    src="./images/customer-inquiry-form.png"
+    alt="Customer Inquiry Form"
+    class="portrait"
+    loading="lazy"
+  >
 
-  <img src="images/customer-inquiries-list.png"
-       alt="All Customer Inquiries"
-       style="width: 100%; border-radius: 12px;">
+  <img
+    src="./images/customer-inquiries-list.png"
+    alt="All Customer Inquiries"
+    loading="lazy"
+  >
 </div>
+
         <p>
           <small>
             The demo link opens the published inquiry form.
