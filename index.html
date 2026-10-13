@@ -157,6 +157,7 @@
 
 
 
+
 /* Projects section */
 #projects {
   width: 100%;
@@ -168,24 +169,62 @@
 #projects .grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-auto-rows: auto;
   gap: 28px;
   width: 100%;
   align-items: stretch;
 }
 
-/* Keep equal-width cards with visible borders */
 #projects .grid > article.card {
   display: flex;
   flex-direction: column;
   min-width: 0;
   width: 100%;
-  height: 100%;
+  height: auto;
   padding: 24px;
   margin: 0;
+  box-sizing: border-box;
   background: var(--panel);
   border: 1px solid var(--border);
   border-radius: 14px;
   overflow-wrap: anywhere;
+}
+
+#projects .card h3 {
+  line-height: 1.4;
+  margin-top: 14px;
+}
+
+#projects .project-gallery {
+  margin-top: 24px;
+  padding-top: 18px;
+  border-top: 1px solid var(--border);
+}
+
+#projects .project-gallery img {
+  display: block;
+  width: 100%;
+  max-height: 260px;
+  object-fit: contain;
+  margin: 0 0 18px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+
+#projects .project-gallery img.portrait {
+  max-width: 420px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 700px) {
+  #projects {
+    padding: 45px 20px;
+  }
+
+  #projects .grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
 }
 
 /* Consistent project headings */
@@ -520,7 +559,6 @@
         </p>
 
         <p><strong>Platform:</strong> Zoho Creator</p>
-
         <a class="btn primary"
            href="https://creatorapp.zohopublic.com/mendiolapaulene/supportflow/report-perma/All_Customer_Inquiries/N98hs1Rr9rCP7ffnKC2OSttkJUDMVbBuXJkbtWVAkYgJG5PHTs6Erak2mCHC49Ydz6HkS6REDr5STbC76GKQOzq7qGC1AeyZQvE3"
            target="_blank"
