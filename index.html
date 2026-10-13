@@ -156,11 +156,13 @@
 
 
 
+
 /* Projects section */
 #projects {
-  max-width: 1200px;
   width: 100%;
+  max-width: 1400px;
   margin: 0 auto;
+  padding: 65px 4%;
 }
 
 #projects .grid {
@@ -171,21 +173,28 @@
   align-items: stretch;
 }
 
-/* Restore the border and background of every project */
-#projects .grid > .card {
+/* Keep equal-width cards with visible borders */
+#projects .grid > article.card {
   display: flex;
   flex-direction: column;
   min-width: 0;
   width: 100%;
   height: 100%;
   padding: 24px;
+  margin: 0;
   background: var(--panel);
   border: 1px solid var(--border);
   border-radius: 14px;
   overflow-wrap: anywhere;
 }
 
-/* Keep screenshots inside their project cards */
+/* Consistent project headings */
+#projects .card h3 {
+  line-height: 1.4;
+  margin-top: 14px;
+}
+
+/* Screenshot gallery */
 #projects .project-gallery {
   margin-top: 24px;
   padding-top: 18px;
@@ -208,21 +217,20 @@
   margin-right: auto;
 }
 
-/* Keep buttons near the bottom when cards differ in content */
-#projects .card > .btn:last-child {
-  align-self: flex-start;
-  margin-top: auto;
-}
-
-/* Mobile layout */
+/* Mobile: one project per row */
 @media (max-width: 700px) {
+  #projects {
+    padding: 45px 20px;
+  }
+
   #projects .grid {
     grid-template-columns: minmax(0, 1fr);
   }
 
-  #projects .grid > .card {
+  #projects .grid > article.card {
     height: auto;
   }
+
 }
     .card p,
     .card li {
